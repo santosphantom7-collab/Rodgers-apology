@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Kezzie ❤️</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:3.5em;
+    margin-bottom:10px;
+    animation:fadeIn 2s ease;
+}
+
+h2{
+    font-weight:300;
+    margin-bottom:30px;
+    animation:fadeIn 3s ease;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 0 25px rgba(255,0,100,0.25);
+    margin-bottom:30px;
+    animation:slideUp 2s ease;
+}
+
+.poem{
+    font-style:italic;
+    line-height:1.8;
+}
+
+button{
+    background:linear-gradient(45deg,#ff4d6d,#ff758f);
+    border:none;
+    color:white;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:1.1em;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 0 15px rgba(255,105,180,0.5);
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 30px rgba(255,105,180,0.9);
+}
+
+#hiddenMessage{
+    display:none;
+    margin-top:30px;
+    animation:fadeIn 2s ease;
+}
+
+/* Floating Hearts */
+.heart{
+    position:fixed;
+    bottom:-10px;
+    font-size:20px;
+    animation:floatUp linear infinite;
+    opacity:0.7;
+}
+
+@keyframes floatUp{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-110vh);}
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes slideUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/02/audio_88c3cb39b0.mp3?filename=emotional-piano-140888.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h1>For My Kezzie ❤️</h1>
+    <h2>An apology from the depths of my heart</h2>
+
+    <div class="card">
+        <p>
+            My love Kezzie,  
+            I am deeply sorry for the pain I caused you. Hurting you is the greatest regret of my heart.
+            Please believe me when I say — **you are the one I want.**
+        </p>
+        <p>
+            I promise to do better, to love you harder, to listen more, and to protect your heart.
+            I never want to lose you, because life without you feels empty.
+        </p>
+        <p>
+            Please forgive me, my love. Let me prove to you that my heart belongs only to you.
+        </p>
+    </div>
+
+    <div class="card poem">
+        <h2>A Poem For You 🌹</h2>
+        <p>
+            I’m sorry for the tears I made you cry,<br>
+            For the lonely nights and every sigh.<br>
+            I’m sorry for the pain I brought your way,<br>
+            For the words I failed to properly say.
+        </p>
+        <p>
+            But know this truth, both deep and true,<br>
+            My heart still beats in love with you.<br>
+            Through every storm, through dark and light,<br>
+            You are my peace, my soul’s delight.
+        </p>
+        <p>
+            If love could speak, it would say your name,<br>
+            Again and again, always the same.<br>
+            For in this world, so vast, so true,<br>
+            There’s no one else — there’s only **you.**
+        </p>
+    </div>
+
+    <button onclick="showMessage()">Click For My Final Message 💌</button>
+
+    <div id="hiddenMessage" class="card">
+        <h2>I Love You Kezzie ❤️</h2>
+        <p>
+            I choose you today.  
+            I choose you tomorrow.  
+            I choose you forever.
+        </p>
+        <p>
+            Please forgive me. Let me love you the way you deserve.
+        </p>
+        <p><b>Forever yours, Rodgers ❤️</b></p>
+    </div>
+
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("hiddenMessage").style.display="block";
+}
+
+/* Floating hearts generator */
+setInterval(()=>{
+    const heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(4+Math.random()*5)+"s";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),9000);
+},400);
+</script>
+
+</body>
+</html>
